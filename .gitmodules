@@ -1,4 +1,4 @@
 [submodule "zot"]
 	path = zot
 	url = https://github.com/project-zot/zot.git
-	branch = v2.1.14
+	branch = v2.1.12

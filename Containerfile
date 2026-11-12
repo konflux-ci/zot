@@ -4,7 +4,7 @@
 ARG ZOT_VERSION
 
 # Build stage
-FROM registry.access.redhat.com/ubi9/go-toolset:latest AS builder
+FROM registry.access.redhat.com/ubi10/go-toolset@sha256:05f3da136a4dbe077f30606e2e53a4f5cab185989c98309823ea06a9a1c52a50 AS builder
 
 ARG ZOT_VERSION
 
@@ -20,7 +20,7 @@ RUN CGO_ENABLED=0 go build -a -installsuffix cgo \
     -o /tmp/zot-binary ./cmd/zot
 
 # Runtime stage
-FROM registry.access.redhat.com/ubi10-micro:10.2-1793858790
+FROM registry.access.redhat.com/ubi10-micro@sha256:8488f5ec082768a01d1ce4e0ef3878f782a40ff6d233afa74bc23d4e740620a4
 
 WORKDIR /srv/zot
 

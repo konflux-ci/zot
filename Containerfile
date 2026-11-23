@@ -20,7 +20,7 @@ RUN CGO_ENABLED=0 go build -a -installsuffix cgo \
     -o /tmp/zot-binary ./cmd/zot
 
 # Runtime stage
-FROM registry.access.redhat.com/ubi10-micro@sha256:8488f5ec082768a01d1ce4e0ef3878f782a40ff6d233afa74bc23d4e740620a4
+FROM registry.access.redhat.com/ubi10-micro@sha256:2ad0f98cb13160c4773c945ef93f88b25831c7f27cd3780d72a7e78b210ea72b
 
 WORKDIR /srv/zot
 
